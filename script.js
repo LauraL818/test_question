@@ -112,22 +112,26 @@ function searchReleases(){
   }
 }
 
-
-document.getElementById("films").addEventListener('click',function (){
-  console.log('clicked')
-    var rows = document.getElementsByClassName('no')
-    // console.log()
-    // for(i=0; i<rows.length; i++){
-    //   console.log(rows[i])
-    //   rows[i].className = "ok"
-    // }
-    // rows.className.remove("no");
-    // rows.className = "ok"
-
-//     // var rows = document.getElementsByClassName('no')
-//     // console.log(rows)
-//     // rows.className = "ok"
-//     // console.log(rows)
-//     // var films = document.getElementsByClassName("films")
-
+document.getElementById("reset").addEventListener('click',function (){
+    console.log('click')
+    loadXML()
    })
+
+// document.getElementById("films").addEventListener('click',function (){
+//   console.log('clicked')
+//     var rows = document.getElementsByClassName('no')
+//     // console.log()
+//     // for(i=0; i<rows.length; i++){
+//     //   console.log(rows[i])
+//     //   rows[i].className = "ok"
+//     // }
+//     // rows.className.remove("no");
+//     // rows.className = "ok"
+//
+// //     // var rows = document.getElementsByClassName('no')
+// //     // console.log(rows)
+// //     // rows.className = "ok"
+// //     // console.log(rows)
+// //     // var films = document.getElementsByClassName("films")
+//
+//    })
