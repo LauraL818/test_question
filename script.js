@@ -7,6 +7,7 @@ function loadXML() {
   };
   xmlhttp.open("GET", "data.xml", true);
   xmlhttp.send();
+
 }
 
 function loadFunction(xml) {
@@ -29,7 +30,8 @@ function loadFunction(xml) {
     cell3.innerHTML = providers[i].innerHTML
 
     cell1.className = "films"
-    row.className = "ok"
+    cell2.className = "ratings"
+    row.className = "table-rows"
 
     var date =  releases[i].innerHTML
     var newDate = date.split("-")
@@ -43,50 +45,56 @@ window.onload = function() {
   loadXML()
 }
 
-function search(){
-  var filmFilter = document.getElementById('films')
+function searchFilms(){
+  var filmFilter = document.getElementById('film')
   var userSelection = filmFilter.options[filmFilter.selectedIndex].text
   var films = document.getElementsByClassName("films")
 
   for(i=0; i< films.length; i++){
-    // console.log(userSelection)
     var rows = films[i].parentNode
-    // console.log(rows)
-    // console.log(rows)
     var title = films[i].innerHTML
     var titleFirst = title.split("")
     var firstIndex = titleFirst[0]
     if(firstIndex !== userSelection){
+      rows.classList.remove("table-rows");
+      rows.classList.add("no");
+    }
+  }
+}
+
+function searchRatings(){
+  var ratingsFilter = document.getElementById('rating')
+
+  var userSelection = ratingsFilter.options[ratingsFilter.selectedIndex].text
+  var ratings = document.getElementsByClassName("ratings")
+console.log(userSelection)
+console.log(ratings)
+  for(i=0; i< ratings.length; i++){
+    var rows = ratings[i].parentNode
+    var rating = ratings[i].innerHTML
+    if(rating !== userSelection){
       rows.classList.remove("ok");
       rows.classList.add("no");
-      // rows.className = "no"
-      // console.log(rows)
     }
   }
 }
 
 
-// document.getElementById("films").addEventListener('click',function (){
-//     var rows = document.getElementsByClassName('no')
-//     console.log(rows)
-//     for(i=0; i<rows.legnth; i++){
-//       console.log(rows[i])
-//     }
-//     // rows.className.remove("no");
-//     // rows.className.add("ok");
+document.getElementById("films").addEventListener('click',function (){
+  console.log('clicked')
+    var rows = document.getElementsByClassName('no')
+    // console.log()
+    // for(i=0; i<rows.length; i++){
+    //   console.log(rows[i])
+    //   rows[i].className = "ok"
+    // }
+    // rows.className.remove("no");
+    // rows.className = "ok"
+
 //     // var rows = document.getElementsByClassName('no')
 //     // console.log(rows)
 //     // rows.className = "ok"
 //     // console.log(rows)
 //     // var films = document.getElementsByClassName("films")
-//     //
-//     // for(i=0; i< films.length; i++){
-//     //   console.log(userSelection)
-//     //   var title = films[i].innerHTML
-//     //   var titleFirst = title.split("")
-//     //   var firstIndex = titleFirst[0]
-//     //   if(firstIndex === userSelection){
-//     //     console.log(firstIndex)
-//     //   }
-//     // }
-//    })
+
+   })
