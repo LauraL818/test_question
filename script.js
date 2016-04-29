@@ -84,11 +84,28 @@ function searchProviders(){
   var providersFilter = document.getElementById('provider')
   var userSelection = providersFilter.options[providersFilter.selectedIndex].text
   var providers = document.getElementsByClassName("providers")
-  console.log(userSelection)
+
   for(i=0; i< providers.length; i++){
     var rows = providers[i].parentNode
     var provider = providers[i].innerHTML
     if(provider !== userSelection){
+      rows.classList.remove("ok");
+      rows.classList.add("no");
+    }
+  }
+}
+
+function searchReleases(){
+  var releasesFilter = document.getElementById('release')
+  var userSelection = releasesFilter.options[releasesFilter.selectedIndex].text
+  var releases = document.getElementsByClassName("releases")
+
+  for(i=0; i< releases.length; i++){
+    var rows = releases[i].parentNode
+    var fullRelease = releases[i].innerHTML
+    var newRelease = fullRelease.split("-")
+    var finalRelease = newRelease[2]
+    if(finalRelease !== userSelection){
       rows.classList.remove("ok");
       rows.classList.add("no");
     }
