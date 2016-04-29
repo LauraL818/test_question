@@ -120,13 +120,14 @@ document.getElementById("reset").addEventListener('click',function (){
 document.getElementById("main-title").addEventListener('click',function (){
     console.log('click')
     var rows = document.getElementById("movieTable").childNodes
+
     var titles = document.getElementsByClassName("films")
     var ratings = document.getElementsByClassName("ratings")
     var providers = document.getElementsByClassName("providers")
     var releases = document.getElementsByClassName("releases")
 
-    var titleArr = []
 
+    var titleArr = []
     for(i=0; i<titles.length; i++){
       var arr = []
       var title = titles[i].innerHTML
@@ -140,7 +141,7 @@ document.getElementById("main-title").addEventListener('click',function (){
       titleArr.push(arr)
     }
 
-    var newTitle = titleArr.sort())
+    var newTitle = titleArr.sort()
 
     for(i=1; i< rows.length; i++){
       var title = newTitle[i-1][0]
@@ -154,37 +155,37 @@ document.getElementById("main-title").addEventListener('click',function (){
 
     }
 
-  })
+})
 
-  
-document.getElementById("main-title").addEventListener('click',function (){
+document.getElementById("main-rating").addEventListener('click',function (){
     console.log('click')
     var rows = document.getElementById("movieTable").childNodes
+
     var titles = document.getElementsByClassName("films")
     var ratings = document.getElementsByClassName("ratings")
     var providers = document.getElementsByClassName("providers")
     var releases = document.getElementsByClassName("releases")
 
     var titleArr = []
-
     for(i=0; i<titles.length; i++){
       var arr = []
       var title = titles[i].innerHTML
       var rating = ratings[i].innerHTML
       var provider = providers[i].innerHTML
       var release = releases[i].innerHTML
-      arr.push(title)
       arr.push(rating)
+      arr.push(title)
       arr.push(provider)
       arr.push(release)
       titleArr.push(arr)
     }
 
-    var newTitle = titleArr.sort())
+    console.log(titleArr)
+    var newTitle = titleArr.sort()
 
     for(i=1; i< rows.length; i++){
-      var title = newTitle[i-1][0]
-      var rating = newTitle[i-1][1]
+      var title = newTitle[i-1][1]
+      var rating = newTitle[i-1][0]
       var provider = newTitle[i-1][2]
       var release = newTitle[i-1][3]
       rows[i].childNodes[0].innerHTML = title
@@ -194,7 +195,7 @@ document.getElementById("main-title").addEventListener('click',function (){
 
     }
 
-  })
+   })
 
 
 
