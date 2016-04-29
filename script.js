@@ -29,15 +29,18 @@ function loadFunction(xml) {
     cell2.innerHTML = ratings[i].innerHTML
     cell3.innerHTML = providers[i].innerHTML
 
-    cell1.className = "films"
-    cell2.className = "ratings"
-    row.className = "table-rows"
-
     var date =  releases[i].innerHTML
     var newDate = date.split("-")
     var finalDate = newDate[1] + "-" + newDate[2] + "-" + newDate[0]
 
     cell4.innerHTML = finalDate
+
+    cell1.className = "films"
+    cell2.className = "ratings"
+    cell3.className = "providers"
+    cell4.className = "releases"
+    row.className = "table-rows"
+
   }
 }
 
@@ -64,15 +67,28 @@ function searchFilms(){
 
 function searchRatings(){
   var ratingsFilter = document.getElementById('rating')
-
   var userSelection = ratingsFilter.options[ratingsFilter.selectedIndex].text
   var ratings = document.getElementsByClassName("ratings")
-console.log(userSelection)
-console.log(ratings)
+
   for(i=0; i< ratings.length; i++){
     var rows = ratings[i].parentNode
     var rating = ratings[i].innerHTML
     if(rating !== userSelection){
+      rows.classList.remove("ok");
+      rows.classList.add("no");
+    }
+  }
+}
+
+function searchProviders(){
+  var providersFilter = document.getElementById('provider')
+  var userSelection = providersFilter.options[providersFilter.selectedIndex].text
+  var providers = document.getElementsByClassName("providers")
+  console.log(userSelection)
+  for(i=0; i< providers.length; i++){
+    var rows = providers[i].parentNode
+    var provider = providers[i].innerHTML
+    if(provider !== userSelection){
       rows.classList.remove("ok");
       rows.classList.add("no");
     }
