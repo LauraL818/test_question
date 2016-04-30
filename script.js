@@ -2,12 +2,11 @@ function loadXML() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      loadFunction(xmlhttp);
+      loadFunction(xmlhttp)
     }
-  };
-  xmlhttp.open("GET", "data.xml", true);
+  }
+  xmlhttp.open("GET", "data.xml", true)
   xmlhttp.send();
-
 }
 
 function loadFunction(xml) {
@@ -40,7 +39,6 @@ function loadFunction(xml) {
     cell3.className = "providers"
     cell4.className = "releases"
     row.className = "table-rows"
-
   }
 }
 
@@ -74,8 +72,8 @@ function searchRatings(){
     var rows = ratings[i].parentNode
     var rating = ratings[i].innerHTML
     if(rating !== userSelection){
-      rows.classList.remove("ok");
-      rows.classList.add("no");
+      rows.classList.remove("ok")
+      rows.classList.add("no")
     }
   }
 }
@@ -89,8 +87,8 @@ function searchProviders(){
     var rows = providers[i].parentNode
     var provider = providers[i].innerHTML
     if(provider !== userSelection){
-      rows.classList.remove("ok");
-      rows.classList.add("no");
+      rows.classList.remove("ok")
+      rows.classList.add("no")
     }
   }
 }
@@ -113,9 +111,13 @@ function searchReleases(){
 }
 
 document.getElementById("reset").addEventListener('click',function (){
-    console.log('click')
-    loadXML()
-   })
+  var releases = document.getElementsByClassName("releases")
+  for(i=0; i< releases.length; i++){
+    var rows = releases[i].parentNode
+      rows.classList.remove("no")
+      rows.classList.add("ok")
+  }
+})
 
 document.getElementById("main-title").addEventListener('click',function (){
     console.log('click')
@@ -152,7 +154,6 @@ document.getElementById("main-title").addEventListener('click',function (){
       rows[i].childNodes[1].innerHTML = rating
       rows[i].childNodes[2].innerHTML = provider
       rows[i].childNodes[3].innerHTML = release
-
     }
 
 })
@@ -180,7 +181,6 @@ document.getElementById("main-rating").addEventListener('click',function (){
       titleArr.push(arr)
     }
 
-    console.log(titleArr)
     var newTitle = titleArr.sort()
 
     for(i=1; i< rows.length; i++){
@@ -219,7 +219,6 @@ document.getElementById("main-provider").addEventListener('click',function (){
       titleArr.push(arr)
     }
 
-    console.log(titleArr)
     var newTitle = titleArr.sort()
 
     for(i=1; i< rows.length; i++){
@@ -235,23 +234,42 @@ document.getElementById("main-provider").addEventListener('click',function (){
     }
 })
 
+document.getElementById("main-release").addEventListener('click',function (){
+    console.log('click')
+    var rows = document.getElementById("movieTable").childNodes
 
+    var titles = document.getElementsByClassName("films")
+    var ratings = document.getElementsByClassName("ratings")
+    var providers = document.getElementsByClassName("providers")
+    var releases = document.getElementsByClassName("releases")
 
-// document.getElementById("films").addEventListener('click',function (){
-//   console.log('clicked')
-//     var rows = document.getElementsByClassName('no')
-//     // console.log()
-//     // for(i=0; i<rows.length; i++){
-//     //   console.log(rows[i])
-//     //   rows[i].className = "ok"
-//     // }
-//     // rows.className.remove("no");
-//     // rows.className = "ok"
-//
-// //     // var rows = document.getElementsByClassName('no')
-// //     // console.log(rows)
-// //     // rows.className = "ok"
-// //     // console.log(rows)
-// //     // var films = document.getElementsByClassName("films")
-//
-//    })
+    var titleArr = []
+    for(i=0; i<titles.length; i++){
+      var arr = []
+      var title = titles[i].innerHTML
+      var rating = ratings[i].innerHTML
+      var provider = providers[i].innerHTML
+      var release = releases[i].innerHTML
+      var newRelease = release.split("")
+      var finalRelease = newRelease[2] + "-" + newRelease[1] + "-" + newRelease[0]
+      arr.push(release)
+      arr.push(title)
+      arr.push(rating)
+      arr.push(provider)
+      titleArr.push(arr)
+    }
+    
+    var newTitle = titleArr.sort()
+
+    for(i=1; i< rows.length; i++){
+      var title = newTitle[i-1][1]
+      var rating = newTitle[i-1][2]
+      var provider = newTitle[i-1][3]
+      var release = newTitle[i-1][0]
+      rows[i].childNodes[0].innerHTML = title
+      rows[i].childNodes[1].innerHTML = rating
+      rows[i].childNodes[2].innerHTML = provider
+      rows[i].childNodes[3].innerHTML = release
+
+    }
+})
