@@ -1,15 +1,19 @@
 body {
   font-family: 'Cabin', sans-serif;
-  /*background-color: #ede9ce;*/
+}
+
+#header {
+  margin:0 auto;
+  width: 350px;
+  color: #89bdd3;
+  font-size: 50px;
 }
 
 table {
-    width:900px;
-    /*background-color: #935347;*/
-    background-color:rgba(227,227,227,0.7);
-    opacity: .8;
-    margin-left: 50px;
-
+  width:90%;
+  background-color:rgba(227,227,227,0.7);
+  opacity:.8;
+  margin-left: 50px;
 }
 
 table, th, td {
@@ -26,22 +30,14 @@ th:hover {
   opacity: 0.3;
 }
 
-.no {
-    display: none;
-}
-
-#header {
-  margin:0 auto;
-  width: 350px;
-  color: #89bdd3;
-  font-size: 50px;
-}
-
 .container{
   margin: 0 auto;
-  /*width:700px;*/
-  max-height: 700px;
+  max-height: 800px;
   overflow: scroll;
+}
+
+#fh {
+margin: 0 65px;
 }
 
 .filters{
@@ -75,6 +71,24 @@ select:hover {
   opacity: 0.3;
 }
 
-#fh {
-margin: 0 65px;
+.no {
+  display: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1000px) {
+  .filters {
+    display: block;
+    float: none;
+    margin: 5px auto;
+  }
+
+    table {
+      margin: 0 auto;
+    }
+
+    .container {
+      max-height: 500px;
+    }
+  }
 }
