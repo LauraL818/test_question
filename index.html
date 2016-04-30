@@ -4,146 +4,141 @@
     <meta charset="utf-8">
     <title>Test Question</title>
     <link rel="stylesheet" href="style.css">
-
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Varela+Round|Cabin' rel='stylesheet' type='text/css'>
   </head>
   <body>
 
 
     <h3 id="header"> Table of Movies</h3>
-    <div class="container">
-
-      <div class="filters">
-        Filters:
-        <select id="film" onchange="if (this.selectedIndex) searchFilms()">
-          <option>Title</option>
-          <option>A</option>
-          <option>B</option>
-          <option>C</option>
-          <option>D</option>
-          <option>E</option>
-          <option>F</option>
-          <option>G</option>
-          <option>H</option>
-          <option>I</option>
-          <option>J</option>
-          <option>K</option>
-          <option>L</option>
-          <option>M</option>
-          <option>N</option>
-          <option>O</option>
-          <option>P</option>
-          <option>Q</option>
+    <div class="filters">
+      <h3 id="fh">Filters:</h3>
+      <select id="film" class="filter-options" onchange="if (this.selectedIndex) searchFilms()">
+        <option>Title</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>H</option>
+        <option>I</option>
+        <option>J</option>
+        <option>K</option>
+        <option>L</option>
+        <option>M</option>
+        <option>N</option>
+        <option>O</option>
+        <option>P</option>
+        <option>Q</option>
+        <option>R</option>
+        <option>S</option>
+        <option>T</option>
+        <option>U</option>
+        <option>V</option>
+        <option>W</option>
+        <option>X</option>
+        <option>Y</option>
+        <option>Z</option>
+      </select>
+      <br>
+      <select id="rating" class="filter-options" onchange="if (this.selectedIndex) searchRatings()">
+          <option>Rating</option>
+          <option>PG</option>
+          <option>PG-13</option>
           <option>R</option>
-          <option>S</option>
-          <option>T</option>
-          <option>U</option>
-          <option>V</option>
-          <option>W</option>
-          <option>X</option>
-          <option>Y</option>
-          <option>Z</option>
+          <option>UR</option>
+          <option>NR</option>
         </select>
+        <br>
+      <select id="provider" class="filter-options" onchange="if (this.selectedIndex) searchProviders()">
+          <option>Provider</option>
+          <option>Cinedigm</option>
+          <option>FilmBuff</option>
+          <option>Gravitas</option>
+          <option>Kino Lorber</option>
+          <option>Lionsgate</option>
+          <option>Magnolia</option>
+          <option>MGM</option>
+          <option>Miramax</option>
+          <option>Music Box</option>
+          <option>Oscilloscope</option>
+          <option>Sony</option>
+          <option>Tribeca</option>
+        </select>
+        <br>
 
-        <select id="rating" onchange="if (this.selectedIndex) searchRatings()">
-            <option>Rating</option>
-            <option>PG</option>
-            <option>PG-13</option>
-            <option>R</option>
-            <option>UR</option>
-            <option>NR</option>
-          </select>
-
-        <select id="provider" onchange="if (this.selectedIndex) searchProviders()">
-            <option>Provider</option>
-            <option>Cinedigm</option>
-            <option>FilmBuff</option>
-            <option>Gravitas</option>
-            <option>Kino Lorber</option>
-            <option>Lionsgate</option>
-            <option>Magnolia</option>
-            <option>MGM</option>
-            <option>Miramax</option>
-            <option>Music Box</option>
-            <option>Oscilloscope</option>
-            <option>Sony</option>
-            <option>Tribeca</option>
-
-          </select>
-
-        <select id="release" onchange="if (this.selectedIndex) searchReleases()">
-            <option>Release Date</option>
-            <option>1955</option>
-            <option>1956</option>
-            <option>1957</option>
-            <option>1958</option>
-            <option>1959</option>
-            <option>1960</option>
-            <option>1961</option>
-            <option>1962</option>
-            <option>1963</option>
-            <option>1964</option>
-            <option>1965</option>
-            <option>1966</option>
-            <option>1967</option>
-            <option>1968</option>
-            <option>1969</option>
-            <option>1970</option>
-            <option>1971</option>
-            <option>1972</option>
-            <option>1973</option>
-            <option>1974</option>
-            <option>1975</option>
-            <option>1976</option>
-            <option>1977</option>
-            <option>1978</option>
-            <option>1979</option>
-            <option>1980</option>
-            <option>1981</option>
-            <option>1982</option>
-            <option>1983</option>
-            <option>1984</option>
-            <option>1985</option>
-            <option>1986</option>
-            <option>1987</option>
-            <option>1988</option>
-            <option>1989</option>
-            <option>1990</option>
-            <option>1991</option>
-            <option>1992</option>
-            <option>1993</option>
-            <option>1994</option>
-            <option>1995</option>
-            <option>1996</option>
-            <option>1997</option>
-            <option>1998</option>
-            <option>1999</option>
-            <option>2000</option>
-            <option>2001</option>
-            <option>2002</option>
-            <option>2003</option>
-            <option>2004</option>
-            <option>2005</option>
-            <option>2006</option>
-            <option>2007</option>
-            <option>2008</option>
-            <option>2009</option>
-            <option>2010</option>
-            <option>2011</option>
-            <option>2012</option>
-            <option>2013</option>
-            <option>2014</option>
-            <option>2015</option>
-            <option>2016</option>
-          </select>
-
-        <button id="reset">Reset Options</button>
-        </div>
+      <select id="release" class="filter-options" onchange="if (this.selectedIndex) searchReleases()">
+          <option>Release Date</option>
+          <option>1955</option>
+          <option>1956</option>
+          <option>1957</option>
+          <option>1958</option>
+          <option>1959</option>
+          <option>1960</option>
+          <option>1961</option>
+          <option>1962</option>
+          <option>1963</option>
+          <option>1964</option>
+          <option>1965</option>
+          <option>1966</option>
+          <option>1967</option>
+          <option>1968</option>
+          <option>1969</option>
+          <option>1970</option>
+          <option>1971</option>
+          <option>1972</option>
+          <option>1973</option>
+          <option>1974</option>
+          <option>1975</option>
+          <option>1976</option>
+          <option>1977</option>
+          <option>1978</option>
+          <option>1979</option>
+          <option>1980</option>
+          <option>1981</option>
+          <option>1982</option>
+          <option>1983</option>
+          <option>1984</option>
+          <option>1985</option>
+          <option>1986</option>
+          <option>1987</option>
+          <option>1988</option>
+          <option>1989</option>
+          <option>1990</option>
+          <option>1991</option>
+          <option>1992</option>
+          <option>1993</option>
+          <option>1994</option>
+          <option>1995</option>
+          <option>1996</option>
+          <option>1997</option>
+          <option>1998</option>
+          <option>1999</option>
+          <option>2000</option>
+          <option>2001</option>
+          <option>2002</option>
+          <option>2003</option>
+          <option>2004</option>
+          <option>2005</option>
+          <option>2006</option>
+          <option>2007</option>
+          <option>2008</option>
+          <option>2009</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+        </select>
+        <br>
+        <button id="reset" class="filter-options" >Reset Options</button>
+      </div>
 
 
-
-
-
-
+    <div class="container">
       <table id="movies">
           <thead>
               <tr>

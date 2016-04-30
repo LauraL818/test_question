@@ -1,14 +1,28 @@
+body {
+  font-family: 'Cabin', sans-serif;
+  background-color: #ede9ce;
+}
+
 table {
     width:900px;
+    background-color: #935347;
+    opacity: .8;
+    margin-left: 50px;
+
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #c7ad88;
   border-collapse:collapse;
+  color:#c7ad88;
 }
 
 th, td {
   padding: 5px;
+}
+
+th:hover {
+  opacity: 0.3;
 }
 
 .no {
@@ -17,15 +31,47 @@ th, td {
 
 #header {
   margin:0 auto;
-  width: 150px;
+  width: 350px;
+  color: #935347;
+  font-size: 50px;
 }
 
 .container{
   margin: 0 auto;
-  width:900px;
+  /*width:700px;*/
+  max-height: 700px;
+  overflow: scroll;
 }
 
 .filters{
-  margin: 0 auto;
-  width:500px;
+  float: left;
+  width:200px;
+  color: #935347;
+  background-color: rgba(100, 112, 108, 0.7);
+  border-radius: 5px;
+  padding:10px 5px;
+  margin-left: 10px;
+}
+
+select {
+  background-color:  #ede9ce;
+  color: #935347;
+  border-color: #c7ad88;
+}
+
+select:hover {
+  opacity: 0.5;
+}
+
+#reset{
+  color: #935347;
+  width: 100px;
+}
+
+#fh {
+margin: 0 65px;
+}
+
+.filter-options {
+margin: 0 65px;
 }
