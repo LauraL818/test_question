@@ -1,12 +1,31 @@
+table {
+    width:900px;
+}
+
 table, th, td {
   border: 1px solid black;
   border-collapse:collapse;
 }
+
 th, td {
   padding: 5px;
 }
 
 .no {
-  /*color: red;*/
-  display: none;
+    display: none;
+}
+
+#header {
+  margin:0 auto;
+  width: 150px;
+}
+
+.container{
+  margin: 0 auto;
+  width:900px;
+}
+
+.filters{
+  margin: 0 auto;
+  width:500px;
 }
