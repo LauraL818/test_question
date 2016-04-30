@@ -1,20 +1,21 @@
 body {
   font-family: 'Cabin', sans-serif;
-  background-color: #ede9ce;
+  /*background-color: #ede9ce;*/
 }
 
 table {
     width:900px;
-    background-color: #935347;
+    /*background-color: #935347;*/
+    background-color:rgba(227,227,227,0.7);
     opacity: .8;
     margin-left: 50px;
 
 }
 
 table, th, td {
-  border: 1px solid #c7ad88;
+  border: 1px solid #c9c9c9;
   border-collapse:collapse;
-  color:#c7ad88;
+  color:#89bdd3;
 }
 
 th, td {
@@ -32,7 +33,7 @@ th:hover {
 #header {
   margin:0 auto;
   width: 350px;
-  color: #935347;
+  color: #89bdd3;
   font-size: 50px;
 }
 
@@ -46,17 +47,18 @@ th:hover {
 .filters{
   float: left;
   width:200px;
-  color: #935347;
-  background-color: rgba(100, 112, 108, 0.7);
+  color: #89bdd3;
+  background-color: rgba(154,211,222,0.4);
   border-radius: 5px;
-  padding:10px 5px;
+  padding: 10px;
   margin-left: 10px;
 }
 
 select {
-  background-color:  #ede9ce;
-  color: #935347;
-  border-color: #c7ad88;
+  background-color: white;
+  color: #89bdd3;
+  width: 100%;
+  border-color: #89bdd3;
 }
 
 select:hover {
@@ -64,14 +66,15 @@ select:hover {
 }
 
 #reset{
-  color: #935347;
-  width: 100px;
+  color: #89bdd3;
+  width: 70%;
+  margin: 0 30px;
+}
+
+#reset:hover{
+  opacity: 0.3;
 }
 
 #fh {
-margin: 0 65px;
-}
-
-.filter-options {
 margin: 0 65px;
 }
