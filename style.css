@@ -1,6 +1,6 @@
-body {
+/*body {
   font-family: 'Cabin', sans-serif;
-}
+}*/
 
 #header {
   margin:0 auto;
@@ -9,7 +9,7 @@ body {
   font-size: 50px;
 }
 
-table {
+/*table {
   width:90%;
   background-color:rgba(227,227,227,0.7);
   opacity:.8;
@@ -22,31 +22,34 @@ table, th, td {
   color:#89bdd3;
 }
 
-th, td {
-  padding: 5px;
+th {
+  padding: 10px;
 }
+
+td {
+  padding: 5px;
+}*/
 
 th:hover {
   opacity: 0.3;
 }
 
-.container {
+/*.container {
   margin: 0 auto;
   max-height: 800px;
   overflow: scroll;
-}
+}*/
 
 #fh {
-margin: 0 65px;
+margin: 0 45px;
 }
 
 .filters {
   float: left;
-  width:200px;
+  width:150px;
   color: #89bdd3;
   background-color: rgba(154,211,222,0.4);
   padding: 10px;
-  margin-left: 10px;
 }
 
 select {
@@ -63,7 +66,7 @@ select:hover {
 #reset {
   color: #89bdd3;
   width: 70%;
-  margin: 0 30px;
+  margin: 0 25px;
 }
 
 #reset:hover {
@@ -74,8 +77,66 @@ select:hover {
   display: none;
 }
 
+body{
+  font-family: 'Cabin', sans-serif;
+}
+
+section {
+  position: relative;
+  padding-top: 37px;
+  background-color:rgba(154,211,222,0.4);
+  color:#89bdd3;
+  margin: 0 auto;
+  width:70%;
+}
+
+.con {
+  background-color:rgba(154,211,222,0.4);
+}
+
+.container {
+  overflow-y: auto;
+  height: 800px;
+  background: white
+}
+
+table {
+  border-spacing: 0;
+  width:100%;
+}
+
+td + td {
+  border-left:1px solid #eee;
+}
+
+td, th {
+  border-bottom:1px solid #eee;
+  background: #e3e3e3;
+  padding: 10px 25px;
+}
+
+th {
+  height: 0;
+  line-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+th div{
+  position: absolute;
+  background: transparent;
+  color: #89bdd3;
+  padding: 9px 25px;
+  top: 0;
+  margin-left: -25px;
+  line-height: normal;
+}
+
 /* RESPONSIVENESS */
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .filters {
     display: block;
     float: none;
@@ -88,6 +149,37 @@ select:hover {
 
     .container {
       max-height: 500px;
+    }
+  }
+
+  @media (max-width: 1055px) {
+    table {
+      font-size:14px;
+    }
+
+  @media (max-width: 950px) {
+    table {
+      font-size:12px;
+    }
+
+  @media (max-width: 840px) {
+    table {
+      font-size:10px;
+    }
+
+    th div {
+    padding: 9px 10px;
+  }
+
+  @media (max-width: 555px) {
+    td, th {
+      padding: 0px 10px;
+    }
+
+    th div{
+      padding: 9px 0px;
+      margin-left: -10px;
+      font-size: 7px;
     }
   }
 }
