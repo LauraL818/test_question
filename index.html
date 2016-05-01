@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Test Question</title>
     <link rel="stylesheet" href="style.css">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Varela+Round|Cabin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Varela+Round|Cabin' rel='stylesheet' type='text/css'>
   </head>
   <body>
+
     <h3 id="header"> Table of Movies</h3>
+
     <div class="filters">
       <h2 id="fh">Filters</h2>
       <select id="film" class="filter-options" onchange="if (this.selectedIndex) searchFilms()">
@@ -65,7 +67,6 @@
           <option>Tribeca</option>
         </select>
         <br>
-
       <select id="release" class="filter-options" onchange="if (this.selectedIndex) searchReleases()">
           <option>Release Date</option>
           <option>1955</option>
@@ -135,8 +136,6 @@
         <button id="reset" class="filter-options" >Reset Options</button>
       </div>
 
-
-
       <section>
         <div class="container">
           <table id="movies">
@@ -154,24 +153,6 @@
           </table>
         </div>
       </section>
-
-
-    <!-- <div class="container">
-      <table id="movies">
-          <thead>
-              <tr>
-                  <th id="main-title">Title &#9660;</th>
-                  <th id="main-rating">Rating &#9660;</th>
-                  <th id="main-provider">Provider &#9660;</th>
-                  <th id="main-release">Release Date &#9660;</th>
-              </tr>
-          </thead>
-
-          <tbody id="movieTable">
-          </tbody>
-
-      </table>
-    </div> -->
 
   <script type="text/javascript" src="script.js"></script>
 
