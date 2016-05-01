@@ -30,7 +30,7 @@ th:hover {
   opacity: 0.3;
 }
 
-.container{
+.container {
   margin: 0 auto;
   max-height: 800px;
   overflow: scroll;
@@ -40,12 +40,11 @@ th:hover {
 margin: 0 65px;
 }
 
-.filters{
+.filters {
   float: left;
   width:200px;
   color: #89bdd3;
   background-color: rgba(154,211,222,0.4);
-  border-radius: 5px;
   padding: 10px;
   margin-left: 10px;
 }
@@ -61,13 +60,13 @@ select:hover {
   opacity: 0.5;
 }
 
-#reset{
+#reset {
   color: #89bdd3;
   width: 70%;
   margin: 0 30px;
 }
 
-#reset:hover{
+#reset:hover {
   opacity: 0.3;
 }
 
