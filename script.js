@@ -18,20 +18,23 @@ function loadFunction(xml) {
 
   for (i = 0; i <titles.length; i++) {
     var table = document.getElementById("movieTable")
+
+    // CREATE TABLE ROWS & CELLS
     var row = table.insertRow(0)
     var cell1 = row.insertCell(0)
     var cell2 = row.insertCell(1)
     var cell3 = row.insertCell(2)
     var cell4 = row.insertCell(3)
 
+    // ASSIGN TABLE ELEMENTS VALUES FROM XML
     cell1.innerHTML = titles[i].innerHTML
     cell2.innerHTML = ratings[i].innerHTML
     cell3.innerHTML = providers[i].innerHTML
 
+    // REARRANGE DATE FORMAT
     var date =  releases[i].innerHTML
     var newDate = date.split("-")
     var finalDate = newDate[1] + "-" + newDate[2] + "-" + newDate[0]
-
     cell4.innerHTML = finalDate
 
     cell1.className = "films"
@@ -46,11 +49,13 @@ window.onload = function() {
   loadXML()
 }
 
+// FILTER FUNCTIONS
 function searchFilms(){
   var filmFilter = document.getElementById('film')
   var userSelection = filmFilter.options[filmFilter.selectedIndex].text
   var films = document.getElementsByClassName("films")
 
+// LOOP THROUGH DATA AND ADD A CLASS TO HIDE ROWS THAT DO NOT MATCH SEARCH
   for(i=0; i< films.length; i++){
     var rows = films[i].parentNode
     var title = films[i].innerHTML
@@ -109,7 +114,9 @@ function searchReleases(){
     }
   }
 }
+// END FILTER FUNCTIONS
 
+// RESET TABLE BY REMOVING CLASS THAT WAS CREATED BY FILTER FUNCTIONS
 document.getElementById("reset").addEventListener('click',function (){
   var releases = document.getElementsByClassName("releases")
   for(i=0; i< releases.length; i++){
@@ -119,6 +126,7 @@ document.getElementById("reset").addEventListener('click',function (){
   }
 })
 
+// SORT TABLE BY COLUMNS
 document.getElementById("main-title").addEventListener('click',function (){
     console.log('click')
     var rows = document.getElementById("movieTable").childNodes
@@ -128,7 +136,7 @@ document.getElementById("main-title").addEventListener('click',function (){
     var providers = document.getElementsByClassName("providers")
     var releases = document.getElementsByClassName("releases")
 
-
+    // CREATE NEW ARRAY OF SORTED DATA
     var titleArr = []
     for(i=0; i<titles.length; i++){
       var arr = []
@@ -145,6 +153,7 @@ document.getElementById("main-title").addEventListener('click',function (){
 
     var newTitle = titleArr.sort()
 
+    // REPLACE ROWS WITH SORTED DATA
     for(i=1; i< rows.length; i++){
       var title = newTitle[i-1][0]
       var rating = newTitle[i-1][1]
@@ -258,7 +267,7 @@ document.getElementById("main-release").addEventListener('click',function (){
       arr.push(provider)
       titleArr.push(arr)
     }
-    
+
     var newTitle = titleArr.sort()
 
     for(i=1; i< rows.length; i++){
@@ -273,3 +282,4 @@ document.getElementById("main-release").addEventListener('click',function (){
 
     }
 })
+// END SORT
