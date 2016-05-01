@@ -1,6 +1,6 @@
-/*body {
+body{
   font-family: 'Cabin', sans-serif;
-}*/
+}
 
 #header {
   margin:0 auto;
@@ -9,37 +9,7 @@
   font-size: 50px;
 }
 
-/*table {
-  width:90%;
-  background-color:rgba(227,227,227,0.7);
-  opacity:.8;
-  margin-left: 50px;
-}
-
-table, th, td {
-  border: 1px solid #c9c9c9;
-  border-collapse:collapse;
-  color:#89bdd3;
-}
-
-th {
-  padding: 10px;
-}
-
-td {
-  padding: 5px;
-}*/
-
-/*th:hover {
-  opacity: 0.7;
-}*/
-
-/*.container {
-  margin: 0 auto;
-  max-height: 800px;
-  overflow: scroll;
-}*/
-
+/* FILTER BOX */
 #fh {
 margin: 0 45px;
 }
@@ -52,6 +22,7 @@ margin: 0 45px;
   padding: 10px;
 }
 
+/* FILTER DROPDOWNS & RESET */
 select {
   background-color: white;
   color: #89bdd3;
@@ -77,10 +48,7 @@ select:hover {
   display: none;
 }
 
-body{
-  font-family: 'Cabin', sans-serif;
-}
-
+/* TABLE STYLING */
 section {
   position: relative;
   padding-top: 37px;
@@ -88,10 +56,6 @@ section {
   color:#89bdd3;
   margin: 0 auto;
   width:70%;
-}
-
-.con {
-  background-color:rgba(154,211,222,0.4);
 }
 
 .container {

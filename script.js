@@ -124,7 +124,6 @@ document.getElementById("reset").addEventListener('click',function (){
       rows.classList.remove("no")
       rows.classList.add("table-rows")
   }
-
 // RESETS SELECTIONS TO ORIGINAL VALUE
   var selectors = document.getElementsByTagName("select")
 
@@ -288,12 +287,6 @@ document.getElementById("main-release").addEventListener('click',function (){
       releases.push(validRows[i].childNodes[3].innerHTML)
     }
 
-    // var titles = document.getElementsByClassName("films")
-    // var ratings = document.getElementsByClassName("ratings")
-    // var providers = document.getElementsByClassName("providers")
-    // var releases = document.getElementsByClassName("releases")
-
-
     var titleArr = []
     for(i=0; i<titles.length; i++){
       var arr = []
@@ -324,18 +317,6 @@ document.getElementById("main-release").addEventListener('click',function (){
       validRows[i-1].childNodes[1].innerHTML = rating
       validRows[i-1].childNodes[2].innerHTML = provider
       validRows[i-1].childNodes[3].innerHTML = finalRelease
-
     }
-    // for(i=1; i < rows.length; i++){
-    //   var title = newTitle[i-1][1]
-    //   var rating = newTitle[i-1][2]
-    //   var provider = newTitle[i-1][3]
-    //   var release = newTitle[i-1][0]
-    //   rows[i].childNodes[0].innerHTML = title
-    //   rows[i].childNodes[1].innerHTML = rating
-    //   rows[i].childNodes[2].innerHTML = provider
-    //   rows[i].childNodes[3].innerHTML = release
-    //
-    // }
 })
 // END SORT
