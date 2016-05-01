@@ -1,12 +1,185 @@
-table, th, td {
-  border: 1px solid black;
-  border-collapse:collapse;
+/*body {
+  font-family: 'Cabin', sans-serif;
+}*/
+
+#header {
+  margin:0 auto;
+  width: 350px;
+  color: #89bdd3;
+  font-size: 50px;
 }
-th, td {
+
+/*table {
+  width:90%;
+  background-color:rgba(227,227,227,0.7);
+  opacity:.8;
+  margin-left: 50px;
+}
+
+table, th, td {
+  border: 1px solid #c9c9c9;
+  border-collapse:collapse;
+  color:#89bdd3;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
   padding: 5px;
+}*/
+
+th:hover {
+  opacity: 0.3;
+}
+
+/*.container {
+  margin: 0 auto;
+  max-height: 800px;
+  overflow: scroll;
+}*/
+
+#fh {
+margin: 0 45px;
+}
+
+.filters {
+  float: left;
+  width:150px;
+  color: #89bdd3;
+  background-color: rgba(154,211,222,0.4);
+  padding: 10px;
+}
+
+select {
+  background-color: white;
+  color: #89bdd3;
+  width: 100%;
+  border-color: #89bdd3;
+}
+
+select:hover {
+  opacity: 0.5;
+}
+
+#reset {
+  color: #89bdd3;
+  width: 70%;
+  margin: 0 25px;
+}
+
+#reset:hover {
+  opacity: 0.3;
 }
 
 .no {
-  /*color: red;*/
   display: none;
+}
+
+body{
+  font-family: 'Cabin', sans-serif;
+}
+
+section {
+  position: relative;
+  padding-top: 37px;
+  background-color:rgba(154,211,222,0.4);
+  color:#89bdd3;
+  margin: 0 auto;
+  width:70%;
+}
+
+.con {
+  background-color:rgba(154,211,222,0.4);
+}
+
+.container {
+  overflow-y: auto;
+  height: 800px;
+  background: white
+}
+
+table {
+  border-spacing: 0;
+  width:100%;
+}
+
+td + td {
+  border-left:1px solid #eee;
+}
+
+td, th {
+  border-bottom:1px solid #eee;
+  background: #e3e3e3;
+  padding: 10px 25px;
+}
+
+th {
+  height: 0;
+  line-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+th div{
+  position: absolute;
+  background: transparent;
+  color: #89bdd3;
+  padding: 9px 25px;
+  top: 0;
+  margin-left: -25px;
+  line-height: normal;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1150px) {
+  .filters {
+    display: block;
+    float: none;
+    margin: 5px auto;
+  }
+
+    table {
+      margin: 0 auto;
+    }
+
+    .container {
+      max-height: 500px;
+    }
+  }
+
+  @media (max-width: 1055px) {
+    table {
+      font-size:14px;
+    }
+
+  @media (max-width: 950px) {
+    table {
+      font-size:12px;
+    }
+
+  @media (max-width: 840px) {
+    table {
+      font-size:10px;
+    }
+
+    th div {
+    padding: 9px 10px;
+  }
+
+  @media (max-width: 555px) {
+    td, th {
+      padding: 0px 10px;
+    }
+
+    th div{
+      padding: 9px 0px;
+      margin-left: -10px;
+      font-size: 7px;
+    }
+  }
 }
